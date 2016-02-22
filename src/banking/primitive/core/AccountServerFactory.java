@@ -1,6 +1,6 @@
 package banking.primitive.core;
 
-/*
+/**
   File:	AccountServerFactory.java
   Author:   ??
   Date:	2/19/2016
@@ -27,10 +27,10 @@ public class AccountServerFactory {
 		return singleton;
 	}
 
-	/**
-      Method: lookup
-      Returns: AccountServer
-      Description: Returns a new instance of ServerSolution.
+    /**
+        Method: lookup
+        Returns: AccountServer
+        Description: Returns a new instance of ServerSolution.
     */
 	public AccountServer lookup() {
 		return new ServerSolution();
