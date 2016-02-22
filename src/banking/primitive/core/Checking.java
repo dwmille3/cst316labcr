@@ -1,5 +1,16 @@
 package banking.primitive.core;
 
+/**
+  File:	Checking.java
+  Author:	??
+  Date:	2/19/2016
+  Description: A specific type of account separate from savings.
+*/
+
+/**
+  Class:	Checking
+  Description: Child class of Account.
+*/
 public class Checking extends Account {
 
 	private static final long serialVersionUID = 11L;

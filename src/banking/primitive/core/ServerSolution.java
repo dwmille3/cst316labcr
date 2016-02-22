@@ -44,12 +44,14 @@ class ServerSolution implements AccountServer {
 			}
 		}
 	}
-	
+
 	private boolean newAccountFactory(String type, String name, float balance)
 		throws IllegalArgumentException {
-		
-		if (accountMap.get(name) != null) return false;
-		
+
+		if (accountMap.get(name) != null) {
+            return false;
+        }
+
 		Account acc;
 		if ("Checking".equals(type)) {
 			acc = new Checking(name, balance);
@@ -68,14 +70,16 @@ class ServerSolution implements AccountServer {
 		return true;
 	}
 
-	public boolean newAccount(String type, String name, float balance) 
+	public boolean newAccount(String type, String name, float balance)
 		throws IllegalArgumentException {
-		
-		if (balance < 0.0f) throw new IllegalArgumentException("New account may not be started with a negative balance");
-		
+
+		if (balance < 0.0f) {
+            throw new IllegalArgumentException("New account may not be started with a negative balance");
+        }
+
 		return newAccountFactory(type, name, balance);
 	}
-	
+
 	public boolean closeAccount(String name) {
 		Account acc = accountMap.get(name);
 		if (acc == null) {
@@ -103,9 +107,9 @@ class ServerSolution implements AccountServer {
 		}
 		return result;
 	}
-	
+
 	public void saveAccounts() throws IOException {
-		ObjectOutputStream out = null; 
+		ObjectOutputStream out = null;
 		try {
 			out = new ObjectOutputStream(new FileOutputStream(fileName));
 
