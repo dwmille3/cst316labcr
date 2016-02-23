@@ -183,10 +183,12 @@ class MainFrame extends JFrame {
 	//** Complete a handler for the Frame that terminates 
 	//** (System.exit(1)) on windowClosing event
 
+	// JV: Exit number altered round 2
+
 	static class FrameHandler extends WindowAdapter {
 		public void windowClosing(WindowEvent e) {
 
-			System.exit(0);
+			System.exit(1);
 		}
 	}
 }
