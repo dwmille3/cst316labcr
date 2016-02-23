@@ -18,6 +18,7 @@ class MainFrame extends JFrame {
 	JLabel			typeLabel;
 	JLabel			nameLabel;
 	JLabel			balanceLabel;
+	// JV: No longer seeing a warning that the references should be paramaterized
 	JComboBox		typeOptions;
 	JTextField		nameField;
 	JTextField		balanceField;
